@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>DotPlot</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script type="module" src="main.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>DotPlot - Comparador de Proteinas</h1>
+
+        <div class="panel">
+            <h2>Secuencia 1</h2>
+            <div class="input-group">
+                <label>ID Proteína 1:</label>
+                <input id="id1" type="text" placeholder="Ej: 1GFL">
+            
+                <label class="check-label">
+                    <input type="checkbox" id="manual1" onchange="toggleManual(1)">
+                    Cargar secuencia manualmente
+                </label>
+            
+                <textarea id="seq1" placeholder="Pegue aquí la secuencia" class="hidden"></textarea>
+            </div>
+            
+            <h2>Secuencia 2</h2>
+            <div class="input-group">
+                <label>ID Proteína 2:</label>
+                <input id="id2" type="text" placeholder="Ej: 2G2S">
+            
+                <label class="check-label">
+                    <input type="checkbox" id="manual2" onchange="toggleManual(2)">
+                    Cargar secuencia manualmente
+                </label>
+            
+                <textarea id="seq2" placeholder="Pegue aquí la secuencia" class="hidden"></textarea>
+            </div>
+
+            <label>Tamaño de Ventana:</label>
+            <input id="window" type="number" value="10">
+
+            <label>Mínimo de coincidencias:</label>
+            <input id="threshold" type="number" value="8">
+
+            <button id="compareBtn">Comparar</button>
+        </div>
+
+        <div id="dotplot"></div>
+        <div id="result"></div>
+    </div>
+    </div>
+</body>
+</html>
