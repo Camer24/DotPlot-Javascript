@@ -31,7 +31,6 @@ window.toggleManual = toggleManual;
 document.getElementById("compareBtn").addEventListener("click", async () => {
   try {
     let seq1;
-
     if (document.getElementById("manual1").checked) {
       const seq = document.getElementById("seq1").value.trim();
       if (!seq) return alert("Ingrese la secuencia 1.");
@@ -43,9 +42,7 @@ document.getElementById("compareBtn").addEventListener("click", async () => {
       seq1 = data;
     }
 
-    // --- SECUENCIA 2 ---
     let seq2;
-
     if (document.getElementById("manual2").checked) {
       const seq = document.getElementById("seq2").value.trim();
       if (!seq) return alert("Ingrese la secuencia 2.");

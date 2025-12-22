@@ -26,7 +26,6 @@ app.get("/fetch", async (req, res) => {
         const response = await axios.get(url);
         const fastaText = response.data;
 
-        // guardar archivo temporal
         const tempPath = path.join(__dirname, `temp_${id}.fasta`);
         fs.writeFileSync(tempPath, fastaText);
 
